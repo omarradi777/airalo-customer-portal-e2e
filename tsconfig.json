@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES6", //modern JavaScript
+    "module": "ESNext", //ES6 module support
+    "moduleResolution": "node", // Required for Node.js-style module resolution
+    "lib": ["ESNext", "dom"], // Keep "dom" for Cypress interactions
+    "esModuleInterop": true, // Ensures compatibility between CommonJS and ES Modules
+    "resolveJsonModule": true,
+    "strict": true, // for strict type checking
+    "forceConsistentCasingInFileNames": true, // to avoid case-sensitivity issues
+    "types": ["cypress", "./support"] // Include Cypress types and custom types
+  },
+  "include": [
+    "cypress/**/*.ts", // Include all Cypress TypeScript files
+    "node_modules/cypress/**/*.d.ts" // Include Cypress type definitions
+  ]
+}

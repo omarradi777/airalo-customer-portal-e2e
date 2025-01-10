@@ -1,0 +1,19 @@
+{
+  "homePageSearch": {
+    "query": "Japan",
+    "segment": "Local",
+    "country": "Japan"
+  },
+  "eSimPageDetails": {
+    "name":"Moshi Moshi",
+    "coverage": "Japan",
+    "data": "1 GB",
+    "duration": "7 Days",
+    "price": "4.50 €"
+  },
+  "eSimOrder":{
+    "description": "Order of 6 ESims to merhaba-7days-1gb",
+    "package_id": "merhaba-7days-1gb",
+    "quantity": 6
+  }
+}

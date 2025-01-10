@@ -1,0 +1,26 @@
+{
+  "env": {  // Set environment globals
+    "browser": true,  // Browser globals like `window` and `document`
+    "cypress/globals": true,  // Enable Cypress-specific globals
+    "es2021": true  // Enable ES2021 features like `async/await`
+  },
+  "extends": [  // Extend base rule sets
+    "eslint:recommended",  // ESLint's recommended basic rules
+    "plugin:@typescript-eslint/recommended",  // TypeScript-specific recommended rules
+    "plugin:cypress/recommended"  // Cypress-specific recommended rules
+  ],
+  "parser": "@typescript-eslint/parser",  // Use TypeScript parser
+  "parserOptions": {  // TypeScript parsing options
+    "project": "./tsconfig.json",  // Path to TypeScript config
+    "ecmaVersion": 12,  // Enable ES2021 syntax
+    "sourceType": "module"  // Enable ECMAScript module syntax (imports/exports)
+  },
+  "plugins": [  // Enable additional ESLint plugins
+    "@typescript-eslint",  // TypeScript linting plugin
+    "cypress"  // Cypress linting plugin
+  ],
+  "rules": {  // Custom linting rules
+    "no-console": "warn",  // Warn on `console.log`
+    "no-debugger": "warn"  // Warn on `debugger` statements
+  }
+}

@@ -35,7 +35,7 @@ Make sure you have the following installed on your local machine before proceedi
 
     ```bash
     https://github.com/omarradi777/airalo-customer-portal-e2e.git
-    cd your-repository-name
+    cd airalo-customer-portal-e2e/
     ```
 
 2. Install project dependencies:
@@ -67,6 +67,8 @@ npm run test:headless:chrome
 ```
 
 ## Test Folder Structure
+
+```text
 /cypress
   /fixtures            # Contains test data (JSON files)
   /e2e                 # Test files for UI and API tests
@@ -74,4 +76,5 @@ npm run test:headless:chrome
   /support             # Commands and setup for the tests
     /components        # Folder that contains reusable components classes
     /pages             # Folder that contains page classes
+
 

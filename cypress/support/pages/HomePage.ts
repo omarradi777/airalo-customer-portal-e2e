@@ -20,9 +20,12 @@ export class HomePage {
   }
 
   acceptCookies(): void {
-    //Ideally I'd replace those commands with cy.setCookie("") if I knew the key/value pair
-    cy.clickIfVisible(this.selectors.acceptCookiesButton);
-    cy.wait(3000); // Temp solution to handle DOM change after accepting cookies then declining wzwrk
-    cy.clickIfVisible(this.selectors.declineWzwrkNotificaitons);
+    cy.clickIfVisible(this.selectors.acceptCookiesButton).then((isClicked) => {
+      if (isClicked) {
+        cy.get(this.selectors.declineWzwrkNotificaitons, { timeout: 10000 }).should('be.visible').click();
+      } else {
+        cy.log('acceptCookiesButton was not found or not visible.');
+      }
+    });
   }
 }

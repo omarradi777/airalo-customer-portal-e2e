@@ -23,16 +23,20 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-Cypress.Commands.add('clickIfVisible', (selector: string) => {
-  cy.get('body').then(($body) => {
+Cypress.Commands.add('clickIfVisible', (selector: string): Cypress.Chainable<boolean> => {
+  return cy.get('body').then(($body) => {
     const element = $body.find(selector);
 
-    // Proceed only if the element exists
+    // Check if the element exists
     if (element.length > 0) {
-      cy.get(selector)
+      return cy
+        .get(selector)
         .should('be.visible') // Ensure the element is visible
-        .click(); // Click the element
+        .click() // Click the element
+        .then(() => cy.wrap(true)); // Return true after clicking
     }
+
+    return cy.wrap(false); // Return false if the element doesn't exist or wasn't clicked
   });
 });
 

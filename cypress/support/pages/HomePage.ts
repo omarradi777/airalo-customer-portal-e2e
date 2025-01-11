@@ -23,6 +23,6 @@ export class HomePage {
     //Ideally I'd replace those commands with cy.setCookie("") if I knew the key/value pair
     cy.clickIfVisible(this.selectors.acceptCookiesButton);
     cy.wait(3000); // Temp solution to handle DOM change after accepting cookies then declining wzwrk
-    cy.clickIfVisible(this.selectors.declineWzwrkNotificaitons);
+    cy.clickIfVisible(this.selectors.declineWzwrkNotificaitons); //TO:DO investigate why it shows up only when running tests headless
   }
 }

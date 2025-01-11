@@ -8,7 +8,7 @@
     "resolveJsonModule": true,
     "strict": true, // for strict type checking
     "forceConsistentCasingInFileNames": true, // to avoid case-sensitivity issues
-    "types": ["cypress", "./support"] // Include Cypress types and custom types
+    "types": ["cypress"] // Include only Cypress types
   },
   "include": [
     "cypress/**/*.ts", // Include all Cypress TypeScript files

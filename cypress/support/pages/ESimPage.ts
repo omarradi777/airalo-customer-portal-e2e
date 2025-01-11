@@ -38,7 +38,7 @@ export class ESimPage {
       .invoke('text')
       .then((text) => {
         const trimmedText = text.trim(); // Trim whitespace from the text
-        expect(trimmedText).to.eq(expectedValue); // Validate the text
+        expect(trimmedText).to.eq(expectedValue);
       });
   }
 }

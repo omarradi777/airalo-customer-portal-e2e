@@ -8,6 +8,7 @@ This repository contains the end-to-end (E2E) tests for [your application name o
   - [Project Setup](#project-setup)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
+  - [Add Env variables](#add-env-variables)
   - [Running Tests](#running-tests)
     - [Run All Tests](#run-all-tests)
   - [Test Folder Structure](#test-folder-structure)
@@ -47,6 +48,10 @@ Make sure you have the following installed on your local machine before proceedi
 3. Cypress will automatically be installed via `npm` and will be available in the `node_modules` folder.
 
 ---
+
+## Add Env variables
+
+Create a `.env` in the root directory of the project and the required env key/values similar to the .env.dist structure
 
 ## Running Tests
 

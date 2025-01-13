@@ -51,7 +51,7 @@ Make sure you have the following installed on your local machine before proceedi
 
 ## Add Env variables
 
-Create a `.env` in the root directory of the project and the required env key/values similar to the .env.dist structure
+Create a `.env` in the root directory of the project and add the required env key/values similar to the .env.dist structure
 
 ## Running Tests
 
